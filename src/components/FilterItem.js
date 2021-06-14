@@ -29,12 +29,12 @@ const FilterItem = ({ data1 }) => {
           <div className="d-flex align-items-center mr-5">
             <div className="d-flex">
               {item.technology.map((tech, index) => (
-                <div className="p-2 m-1">
-                  <span class="badge badge-pill badge-success">{tech}</span>
+                <div className="p-2 m-1" key={index}>
+                  <span className="badge badge-pill badge-success">{tech}</span>
                 </div>
               ))}
             </div>
-            <span class="badge badge-pill badge-success">{item.ctc}-LPA</span>
+            <span className="badge badge-pill badge-success">{item.ctc}-LPA</span>
           </div>
         </div>
         </Link>

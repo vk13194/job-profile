@@ -4,10 +4,10 @@ const DataItem = ({ data1 }) => {
   return (
     <div>
       {data1.map((item) => (
-        <Link  to={`/details/${item.id}`} className="nav-link">
+        <Link  to={`/details/${item.id}`}  key={item.id} className="nav-link" style={{cursor:'pointer'}} >
         <div
           className="d-flex shadow-lg m-3 justify-content-between"
-          key={item.id}
+         
         >
           <div className="d-flex align-items-center pl-3">
             <img
@@ -28,12 +28,12 @@ const DataItem = ({ data1 }) => {
           <div className="d-flex align-items-center mr-5">
             <div className="d-flex">
               {item.technology.map((tech, index) => (
-                <div className="p-2 m-1">
-                  <span class="badge badge-pill badge-success">{tech}</span>
+                <div className="p-2 m-1" key={index}>
+                  <span className="badge badge-pill badge-success">{tech}</span>
                 </div>
               ))}
             </div>
-            <span class="badge badge-pill badge-success">{item.ctc}-LPA</span>
+            <span className="badge badge-pill badge-success">{item.ctc}-LPA</span>
 
           </div>
         </div>
